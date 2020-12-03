@@ -11,10 +11,10 @@ for slope in slopes:
     for line_num, row in enumerate(map_file):
         if line_num == 0:
             length_row = len(row)
-            #print("Length of row is %d" % length_row)
+            # print("Length of row is %d" % length_row)
         else:
             if line_num % slope[1] == 0:
-                #print("Processing line %d" % line_num)
+                # print("Processing line %d" % line_num)
                 if row[position] == '#':
                     num_trees += 1
                 position = (position + slope[0]) % (length_row - 1)
@@ -22,4 +22,3 @@ for slope in slopes:
     multiplied_trees *= num_trees
 
 print("Multiplied trees is %d" % multiplied_trees)
-
