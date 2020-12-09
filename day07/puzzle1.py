@@ -1,6 +1,3 @@
-
-count = 0
-
 graph = {}
 
 # O(N)
@@ -44,7 +41,8 @@ def find_shiny_gold(contents):
 
 # Avoid recalculating already calculated graphs
 processed = {}
-
+count = 0
+# O(N)
 for container, contents in graph.items():
     print("Processing %s container with %s contents" % (container, contents))
     if container in processed.keys():
